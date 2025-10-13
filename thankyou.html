@@ -21,11 +21,26 @@
       font-size: 1.2em;
       margin-top: 20px;
     }
+    #countdown {
+      font-size: 1.5em;
+      color: #555;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
   <h1>Thank You for Reaching Out!</h1>
   <p>We’ve received your message and will get back to you soon.</p>
-  <p>You’ll be redirected to the homepage in 12 seconds…</p>
+  <p>You’ll be redirected to the homepage in <span id="countdown">12</span> seconds…</p>
+
+  <script>
+    let seconds = 12;
+    const countdown = document.getElementById("countdown");
+    const timer = setInterval(() => {
+      seconds--;
+      countdown.textContent = seconds;
+      if (seconds <= 0) clearInterval(timer);
+    }, 1000);
+  </script>
 </body>
 </html>
