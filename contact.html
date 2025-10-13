@@ -27,16 +27,21 @@
 
     <h3>Phone & Email</h3>
     <p>Phone: (507) 555-1234<br>Email: info@riversidecounselingmn.com</p>
-
-   <form action="https://formsubmit.co/info@riversidecounselingmn.com" method="POST">
+    
+<form action="https://formsubmit.co/info@riversidecounselingmn.com" method="POST">
   <input type="text" name="name" placeholder="Your Name" required>
   <input type="email" name="email" placeholder="Your Email" required>
   <textarea name="message" placeholder="Your Message" required></textarea>
 
+  <!-- Anti-spam field (optional) -->
+  <input type="text" name="_honey" style="display:none">
+
+  <!-- Redirect after submission (optional) -->
   <input type="hidden" name="_next" value="https://www.riversidecounselingmn.com/thankyou.html">
 
   <button type="submit">Send</button>
 </form>
+
   </main>
 
   <footer>
@@ -44,4 +49,5 @@
   </footer>
 </body>
 </html>
+
 
